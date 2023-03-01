@@ -57,7 +57,7 @@ def main():
             print("Already open")
             exit()
                 
-        r = requests.put('http://192.168.1.100:30801/devices/1670846409/data', json.dumps({'name': 'position', 'value': 100}))
+        r = requests.put(config.get('TYDOMAPI_URL') + '/devices/' + config.get('DEVICE_ID') + '/data', json.dumps({'name': 'position', 'value': 100}))
         assert r.status_code == 200
         print("Here shine the sun")
 
