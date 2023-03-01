@@ -11,7 +11,7 @@ config = {
     **os.environ
 }
 
-if __name__ == 'main':
+if __name__ == '__main__':
 
     client = influxdb_client.InfluxDBClient(
     url=config.get('SOCKY_INFLUX_URL'),
